@@ -26,11 +26,12 @@ func main() {
 			log.Print(err)
 			continue
 		}
-        log.Print("accepted")
+         	log.Print("accepted")
 
-        sc, err := d.Dial("tcp", "2k3ffkhtbvxromr3.onion:22")
+        	sc, err := d.Dial("tcp", "2k3ffkhtbvxromr3.onion:22")
 		if err != nil {
 			log.Print(err)
+			tc.Close()
 			continue
 		}
 
